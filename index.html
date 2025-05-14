@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morais Dias Advocacia | Excelência Jurídica em Ceará-Mirim/RN</title>
+    <meta name="description" content="Escritório especializado em Direito Previdenciário, Trabalhista, Consumidor e Família. Atendimento personalizado em Ceará-Mirim/RN.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="logopng.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET E ESTILOS GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 90px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* CABEÇALHO REDESENHADO */
+        header {
+            background-color: #0F1C3F;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-bottom: 2px solid #D4AF37;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo-text span {
+            color: #D4AF37;
+            font-style: italic;
+        }
+        
+        /* MENU PRINCIPAL */
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #D4AF37;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* MENU MOBILE */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mobile-menu-btn:hover {
+            color: #D4AF37;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background-color: #0F1C3F;
+            padding: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        
+        .mobile-menu a:hover {
+            color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 3px solid #D4AF37;
+            padding-left: 35px;
+        }
+        
+        /* BANNER HERO */
+        .hero {
+            background: linear-gradient(rgba(15, 28, 63, 0.8), rgba(15, 28, 63, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* SEÇÃO DE SERVIÇOS */
+        .services {
+            padding: 100px 0;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .services h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #0F1C3F;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .services h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: #D4AF37;
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 25px;
+            width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card i {
+            font-size: 2.5rem;
+            color: #D4AF37;
+            margin-bottom: 25px;
+        }
+        
+        .card h3 {
+            margin-bottom: 15px;
+            color: #0F1C3F;
+            font-size: 1.4rem;
+        }
+        
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* BOTÃO FLUTUANTE DO WHATSAPP */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .float-whatsapp:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* RODAPÉ REDESENHADO */
+        footer {
+            background-color: #0a142c;
+            color: white;
+            text-align: center;
+            padding: 60px 0 30px;
+            position: relative;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo img {
+            height: 60px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+        
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .footer-title span {
+            color: #D4AF37;
+            font-style: italic;
+        }
+        
+        .footer-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .contact-icon {
+            color: #D4AF37;
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            margin-bottom: 30px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .social-links a:hover {
+            color: #D4AF37;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .credits {
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+        
+        .credits a {
+            color: #D4AF37;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .credits a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ANIMAÇÕES */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* RESPONSIVIDADE */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .services h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 80px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
+            .hero {
+                min-height: 500px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .service-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .footer-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CABEÇALHO COM LOGO -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="logopng.png" alt="Morais Dias Advocacia">
+                <div class="logo-text">
+                    MORAIS <span>DIAS</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="areas.html">Áreas</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- MENU MOBILE -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Início</a>
+            <a href="areas.html">Áreas</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Excelência Jurídica com Comprometimento</h1>
+                <p>No escritório Morais Dias Advocacia, oferecemos soluções personalizadas nas áreas Previdenciária, Trabalhista, Consumidor e Família, sempre com ética e transparência.</p>
+                <a href="https://wa.me/5584991199310" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Fale Diretamente
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS (CALL TO ACTION) -->
+    <section class="services" id="areas">
+        <div class="container">
+            <h2>Nossas Especialidades</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Previdenciário</h3>
+                    <p>Aposentadorias, revisões de benefícios, auxílios doença e pensões junto ao INSS.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Trabalhista</h3>
+                    <p>Rescisões trabalhistas, assédio moral, horas extras não pagas e demais direitos.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Consumidor</h3>
+                    <p>Defesa contra cobranças abusivas, produtos defeituosos e má prestação de serviços.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-home"></i>
+                    <h3>Família</h3>
+                    <p>Divórcios consensuais e litigiosos, pensão alimentícia, guarda e regulamentação de visitas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5584991199310" class="float-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- RODAPÉ REDESENHADO -->
+    <footer id="contato">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="logopng.png" alt="Morais Dias Advocacia">
+                <div class="footer-title">MORAIS <span>DIAS</span> ADVOCACIA</div>
+            </div>
+            
+            <div class="footer-contacts">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span>Rua Nove de Julho, 298 – Centro, Ceará-Mirim/RN</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <span>(84) 99119-9310</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span>nafcdj@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-id-card contact-icon"></i>
+                    <span>OAB/RN 11071</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:nafcdj@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Morais Dias Advocacia. Todos os direitos reservados.
+                <div class="credits">
+                    Desenvolvido por <a href="https://www.instagram.com/proj.oraculo/" target="_blank">Projeto Oráculo</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.background = 'rgba(15, 28, 63, 0.98)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.background = '#0F1C3F';
+            }
+        });
+
+        // Menu mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fechar menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+</body>
+</html>
