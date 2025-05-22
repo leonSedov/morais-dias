@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas de Atuação | Morais Dias Advocacia</title>
+    <meta name="description" content="Conheça nossas áreas de atuação: Direito Previdenciário, Trabalhista, Consumidor e Família. Atendimento em Ceará-Mirim/RN.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="logopng.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* RESET E ESTILOS GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 90px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* CABEÇALHO REDESENHADO */
+        header {
+            background-color: #0F1C3F;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-bottom: 2px solid #D4AF37;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-text {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .logo-text span {
+            color: #D4AF37;
+            font-style: italic;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+        
+        /* MENU PRINCIPAL */
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #D4AF37;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* MENU MOBILE */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .mobile-menu-btn:hover {
+            color: #D4AF37;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background-color: #0F1C3F;
+            padding: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        
+        .mobile-menu a:hover {
+            color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 3px solid #D4AF37;
+            padding-left: 35px;
+        }
+        
+        /* BANNER DE PÁGINA INTERNA */
+        .page-banner {
+            background: linear-gradient(rgba(15, 28, 63, 0.8), rgba(15, 28, 63, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        
+        .page-banner h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .page-banner p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* SEÇÃO DE ÁREAS DE ATUAÇÃO */
+        .practice-areas {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #0F1C3F;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: #D4AF37;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .area-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .area-card {
+            flex: 1 1 300px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .area-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .area-icon {
+            font-size: 2.5rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+        
+        .area-card h3 {
+            margin-bottom: 15px;
+            color: #0F1C3F;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .area-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .area-services {
+            margin-top: 20px;
+        }
+        
+        .area-services h4 {
+            color: #0F1C3F;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .area-services h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 2px;
+            background: #D4AF37;
+        }
+        
+        .area-services ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .area-services li {
+            margin-bottom: 8px;
+            position: relative;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        .area-services li::before {
+            content: '•';
+            color: #D4AF37;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* SEÇÃO DE DIFERENCIAIS */
+        .differentiators {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .diff-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .diff-card {
+            flex: 1 1 250px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .diff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .diff-icon {
+            font-size: 2rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+        
+        .diff-card h3 {
+            color: #0F1C3F;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .diff-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* BOTÃO FLUTUANTE DO WHATSAPP */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .float-whatsapp:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* RODAPÉ REDESENHADO */
+        footer {
+            background-color: #0a142c;
+            color: white;
+            text-align: center;
+            padding: 60px 0 30px;
+            position: relative;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo img {
+            height: 60px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+        
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .footer-title span {
+            color: #D4AF37;
+            font-style: italic;
+        }
+        
+        .footer-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .contact-icon {
+            color: #D4AF37;
+            font-size: 1.2rem;
+        }
+        
+        .social-links {
+            margin-bottom: 30px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .social-links a:hover {
+            color: #D4AF37;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .credits {
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+        
+        .credits a {
+            color: #D4AF37;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .credits a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ANIMAÇÕES */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* RESPONSIVIDADE */
+        @media (max-width: 992px) {
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 80px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
+            .page-banner {
+                height: 250px;
+            }
+            
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .area-card {
+                flex: 1 1 100%;
+            }
+            
+            .footer-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CABEÇALHO COM LOGO -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="logopng.png" alt="Morais Dias Advocacia">
+                <div class="logo-text">
+                    MORAIS <span>DIAS</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="areas.html" class="active">Áreas</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- MENU MOBILE -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Início</a>
+            <a href="areas.html" class="active">Áreas</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </header>
+
+    <!-- BANNER DE PÁGINA INTERNA -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Áreas de Atuação</h1>
+            <p>Conheça nossas especialidades e como podemos ajudar a proteger seus direitos com excelência jurídica</p>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="practice-areas">
+        <div class="container">
+            <h2 class="section-title">Nossas Especialidades</h2>
+            
+            <div class="area-container">
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Direito Previdenciário</h3>
+                    <p>Atuamos em todas as questões relacionadas à Previdência Social, buscando sempre os melhores benefícios para nossos clientes.</p>
+                    
+                    <div class="area-services">
+                        <h4>Principais serviços:</h4>
+                        <ul>
+                            <li>Aposentadorias (por idade, tempo de contribuição, especial)</li>
+                            <li>Revisão de benefícios concedidos</li>
+                            <li>Auxílio-doença e auxílio-acidente</li>
+                            <li>Pensão por morte</li>
+                            <li>LOAS/BPC</li>
+                            <li>Revisão da vida toda</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Defendemos os direitos dos trabalhadores com expertise e comprometimento, garantindo que todas as verbas trabalhistas sejam devidamente pagas.</p>
+                    
+                    <div class="area-services">
+                        <h4>Principais serviços:</h4>
+                        <ul>
+                            <li>Rescisão indireta</li>
+                            <li>Horas extras não pagas</li>
+                            <li>Adicionais (insalubridade, periculosidade, noturno)</li>
+                            <li>Assédio moral</li>
+                            <li>Acidente de trabalho</li>
+                            <li>Reclamação trabalhista</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Direito do Consumidor</h3>
+                    <p>Protegemos os consumidores contra abusos e garantimos que seus direitos sejam respeitados em todas as relações de consumo.</p>
+                    
+                    <div class="area-services">
+                        <h4>Principais serviços:</h4>
+                        <ul>
+                            <li>Defesa contra cobranças abusivas</li>
+                            <li>Indenização por danos materiais e morais</li>
+                            <li>Problemas com compras online</li>
+                            <li>Produtos com defeito</li>
+                            <li>Má prestação de serviços</li>
+                            <li>Planos de saúde</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="area-card">
+                    <div class="area-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Direito de Família</h3>
+                    <p>Atuamos com sensibilidade nas questões familiares, buscando sempre a melhor solução para cada caso com ética e discrição.</p>
+                    
+                    <div class="area-services">
+                        <h4>Principais serviços:</h4>
+                        <ul>
+                            <li>Divórcio consensual e litigioso</li>
+                            <li>Pensão alimentícia</li>
+                            <li>Guarda de filhos</li>
+                            <li>Regulamentação de visitas</li>
+                            <li>Reconhecimento e dissolução de união estável</li>
+                            <li>Inventário e partilha de bens</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="differentiators">
+        <div class="container">
+            <h2 class="section-title">Nossos Diferenciais</h2>
+            
+            <div class="diff-container">
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Atendimento Personalizado</h3>
+                    <p>Cada caso é tratado com atenção individualizada, garantindo soluções sob medida para suas necessidades jurídicas.</p>
+                </div>
+                
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Resultados Comprovados</h3>
+                    <p>Histórico de sucesso em diversas áreas do direito, com clientes satisfeitos e casos resolvidos com excelência.</p>
+                </div>
+                
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Transparência</h3>
+                    <p>Relação de confiança com o cliente, com informações claras sobre cada etapa do processo jurídico.</p>
+                </div>
+                
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Atendimento Local</h3>
+                    <p>Escritório físico em Ceará-Mirim/RN, com conhecimento das particularidades jurídicas da região.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5584991199310" class="float-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- RODAPÉ REDESENHADO -->
+    <footer id="contato">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="logopng.png" alt="Morais Dias Advocacia">
+                <div class="footer-title">MORAIS <span>DIAS</span> ADVOCACIA</div>
+            </div>
+            
+            <div class="footer-contacts">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span>Rua Nove de Julho, 298 – Centro, Ceará-Mirim/RN</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <span>(84) 99119-9310</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span>nafcdj@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-id-card contact-icon"></i>
+                    <span>OAB/RN 11071</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:nafcdj@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Morais Dias Advocacia. Todos os direitos reservados.
+                <div class="credits">
+                    Desenvolvido por <a href="https://www.instagram.com/proj.oraculo/" target="_blank">Projeto Oráculo</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de scroll no header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.background = 'rgba(15, 28, 63, 0.98)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.background = '#0F1C3F';
+            }
+        });
+
+        // Menu mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Fechar menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Destacar link ativo no menu mobile
+        const currentPage = window.location.pathname.split('/').pop();
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+        
+        mobileMenuLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
