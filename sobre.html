@@ -418,9 +418,11 @@
         }
 
         .team-members {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 30px;
+            flex-wrap: wrap;
         }
 
         .team-member {
@@ -430,6 +432,9 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
             transition: all 0.4s ease;
             text-align: center;
+             max-width: 340px; /* Limita a largura máxima do card */
+            width: 100%;
+            margin: 0 auto;
         }
 
         .team-member:hover {
@@ -441,6 +446,9 @@
             width: 100%;
             height: 300px;
             object-fit: cover;
+            max-width: 340px; /* Garante que a imagem não ultrapasse o card */
+            margin: 0 auto;
+            display: block;
         }
 
         .member-info {
@@ -912,52 +920,12 @@
         </div>
     </section>
 
-    <!-- NOSSA EQUIPE -->
-    <section class="team" id="equipe">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossa Equipe</h2>
-            </div>
-            
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Francisco Junior" class="member-photo">
-                    <div class="member-info">
-                        <h3>Francisco Junior</h3>
-                        <p class="position">Advogado Fundador</p>
-                        <p class="bio">OAB/RN 11071. Especialista em Direito Previdenciário e Trabalhista com mais de 10 anos de experiência na defesa dos direitos de seus clientes.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
+
                         </div>
                     </div>
                 </div>
                 
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Ana Beatriz" class="member-photo">
-                    <div class="member-info">
-                        <h3>Ana Beatriz</h3>
-                        <p class="position">Advogada Associada</p>
-                        <p class="bio">Especialista em Direito de Família e Sucessões. Comprometida com soluções jurídicas que preservem relações familiares e garantam direitos.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Carlos Eduardo" class="member-photo">
-                    <div class="member-info">
-                        <h3>Carlos Eduardo</h3>
-                        <p class="position">Advogado Associado</p>
-                        <p class="bio">Especialista em Direito do Consumidor e Contratos. Atua com foco na defesa dos direitos dos consumidores e na prevenção de litígios.</p>
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
+
                         </div>
                     </div>
                 </div>
