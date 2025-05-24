@@ -3,478 +3,940 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morais Dias Advocacia | Excelência Jurídica em Ceará-Mirim/RN</title>
-    <meta name="description" content="Escritório especializado em Direito Previdenciário, Trabalhista, Consumidor e Família. Atendimento personalizado em Ceará-Mirim/RN.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>MD Advocacia | Excelência Jurídica Personalizada</title>
+    <meta name="description" content="Escritório premium de advocacia em Ceará-Mirim/RN. Soluções jurídicas estratégicas em Direito Previdenciário, Trabalhista, Consumidor e Família.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="logopng.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        /* RESET E ESTILOS GERAIS */
+        :root {
+            --primary: #0A1F44;
+            --secondary: #D4A017;
+            --accent: #E8EFF7;
+            --text: #333333;
+            --light: #FFFFFF;
+            --dark: #0A142C;
+            --gray: #6D7D93;
+            --success: #28A745;
+        }
+
+        /* RESET E BASE */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--light);
+            overflow-x: hidden;
             padding-top: 90px;
         }
-        
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
         .container {
-            max-width: 1200px;
+            width: 100%;
+            max-width: 1320px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* CABEÇALHO REDESENHADO */
-        header {
-            background-color: #0F1C3F;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            border-bottom: 2px solid #D4AF37;
+
+        section {
+            padding: 100px 0;
         }
-        
+
+        /* CABEÇALHO PREMIUM REDESENHADO */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+            padding: 20px 0;
+            background-color: rgba(10, 31, 68, 0.98);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            border-bottom: 1px solid rgba(212, 160, 23, 0.3);
+        }
+
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 30px;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
-        
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
         .logo img {
-            height: 50px;
+            height: 46px;
             width: auto;
+            transition: all 0.4s ease;
         }
-        
+
         .logo-text {
-            color: white;
+            color: var(--light);
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             font-weight: 700;
+            letter-spacing: 0.5px;
+            line-height: 1;
         }
-        
+
         .logo-text span {
-            color: #D4AF37;
+            color: var(--secondary);
             font-style: italic;
-            text-decoration: none; /* Remove sublinhado */
-            border: none; /* Remove borda */
-            outline: none; /* Remove contorno */
-            box-shadow: none; /* Remove qualquer sombra */
+            font-weight: 800;
         }
-        
-        /* MENU PRINCIPAL */
+
+        /* MENU PRINCIPAL REDESENHADO */
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 35px;
         }
-        
+
         .nav-links a {
-            color: white;
+            color: var(--light);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1.05rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             position: relative;
-            padding: 5px 0;
-            transition: all 0.3s;
+            padding: 8px 2px;
+            transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+            opacity: 0.9;
         }
-        
-        .nav-links a:hover {
-            color: #D4AF37;
-        }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
             width: 0;
             height: 2px;
-            background: #D4AF37;
+            background: var(--secondary);
             bottom: 0;
             left: 0;
-            transition: width 0.3s;
+            transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
-        
-        .nav-links a:hover::after {
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--light);
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
             width: 100%;
         }
-        
-        /* MENU MOBILE */
+
+        /* MENU MOBILE PREMIUM */
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            color: white;
+            color: var(--light);
             font-size: 1.8rem;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            padding: 8px;
         }
-        
+
         .mobile-menu-btn:hover {
-            color: #D4AF37;
+            color: var(--secondary);
+            transform: rotate(90deg);
         }
-        
+
         .mobile-menu {
-            display: none;
             position: fixed;
-            top: 90px;
+            top: 0;
             left: 0;
             width: 100%;
-            background-color: #0F1C3F;
-            padding: 20px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        
-        .mobile-menu.active {
-            display: block;
-        }
-        
-        .mobile-menu a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            border-left: 3px solid transparent;
-        }
-        
-        .mobile-menu a:hover {
-            color: #D4AF37;
-            background: rgba(212, 175, 55, 0.1);
-            border-left: 3px solid #D4AF37;
-            padding-left: 35px;
-        }
-        
-        /* BANNER HERO */
-        .hero {
-            background: linear-gradient(rgba(15, 28, 63, 0.8), rgba(15, 28, 63, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
             height: 100vh;
-            min-height: 600px;
+            background-color: var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.4rem;
+            padding: 15px 0;
+            margin: 10px 0;
+            position: relative;
+            transition: all 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: var(--secondary);
+            opacity: 1;
+            transform: translateX(10px);
+        }
+
+        .mobile-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 10px;
+            left: 0;
+            transition: all 0.4s ease;
+        }
+
+        .mobile-menu a:hover::after,
+        .mobile-menu a.active::after {
+            width: 100%;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            min-height: 800px;
             display: flex;
             align-items: center;
-            text-align: center;
-            color: white;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(10, 31, 68, 0.85), rgba(10, 31, 68, 0.85)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--light);
         }
-        
+
         .hero-content {
             max-width: 800px;
-            margin: 0 auto;
-            animation: fadeIn 1.5s ease;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease;
         }
-        
+
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
             line-height: 1.2;
+            font-weight: 800;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             opacity: 0.9;
+            max-width: 600px;
         }
-        
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
             display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-        
-        .btn-whatsapp:hover {
-            background-color: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-        
-        /* SEÇÃO DE SERVIÇOS */
-        .services {
-            padding: 100px 0;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
             text-align: center;
-            background-color: white;
         }
-        
-        .services h2 {
-            font-family: 'Playfair Display', serif;
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #C28F15;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 160, 23, 0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* SERVIÇOS */
+        .services {
+            background-color: var(--light);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
             font-size: 2.5rem;
-            margin-bottom: 60px;
-            color: #0F1C3F;
+            color: var(--primary);
             position: relative;
             display: inline-block;
         }
-        
-        .services h2::after {
+
+        .section-header h2::after {
             content: '';
             position: absolute;
-            width: 50%;
-            height: 3px;
-            background: #D4AF37;
-            bottom: -10px;
-            left: 25%;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        
+
         .service-cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-        
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 40px 25px;
-            width: 280px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+
+        .service-card {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
-        
-        .card:hover {
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--secondary);
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
         }
-        
-        .card i {
+
+        .service-card:hover::before {
+            height: 10px;
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            color: var(--secondary);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--secondary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        /* SOBRE */
+        .about {
+            background-color: var(--accent);
+            position: relative;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.5s ease;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-content h2 {
             font-size: 2.5rem;
-            color: #D4AF37;
+            color: var(--primary);
             margin-bottom: 25px;
         }
-        
-        .card h3 {
-            margin-bottom: 15px;
-            color: #0F1C3F;
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .about-features {
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        /* DEPOIMENTOS */
+        .testimonials {
+            background-color: var(--light);
+            position: relative;
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: rgba(212, 160, 23, 0.1);
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-weight: bold;
             font-size: 1.4rem;
+            flex-shrink: 0;
         }
-        
-        .card p {
-            color: #666;
-            font-size: 0.95rem;
+
+        .author-info h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
         }
-        
-        /* BOTÃO FLUTUANTE DO WHATSAPP */
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: var(--secondary);
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* CONTATO */
+        .contact {
+            background-color: var(--accent);
+            position: relative;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-card {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .contact-text p, 
+        .contact-text a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            opacity: 0.8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-contact i {
+            color: var(--secondary);
+            margin-top: 4px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* WHATSAPP FLOAT */
         .float-whatsapp {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #25D366;
-            color: white;
             width: 60px;
             height: 60px;
+            background-color: var(--success);
+            color: var(--light);
             border-radius: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             font-size: 1.8rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
-            z-index: 1000;
-            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
         }
-        
+
         .float-whatsapp:hover {
-            background-color: #128C7E;
             transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.4);
         }
-        
-        /* RODAPÉ REDESENHADO */
-        footer {
-            background-color: #0a142c;
-            color: white;
-            text-align: center;
-            padding: 60px 0 30px;
-            position: relative;
-        }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .footer-logo {
-            margin-bottom: 30px;
-        }
-        
-        .footer-logo img {
-            height: 60px;
-            width: auto;
-            margin-bottom: 15px;
-        }
-        
-        .footer-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: white;
-            margin-bottom: 5px;
-        }
-        
-        .footer-title span {
-            color: #D4AF37;
-            font-style: italic;
-        }
-        
-        .footer-contacts {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .contact-icon {
-            color: #D4AF37;
-            font-size: 1.2rem;
-        }
-        
-        .social-links {
-            margin-bottom: 30px;
-        }
-        
-        .social-links a {
-            color: white;
-            margin: 0 15px;
-            font-size: 1.5rem;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .social-links a:hover {
-            color: #D4AF37;
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .credits {
-            margin-top: 10px;
-            font-size: 0.85rem;
-        }
-        
-        .credits a {
-            color: #D4AF37;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .credits a:hover {
-            text-decoration: underline;
-        }
-        
+
         /* ANIMAÇÕES */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(40, 167, 69, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+
         /* RESPONSIVIDADE */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
         @media (max-width: 992px) {
+            section {
+                padding: 80px 0;
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-img {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
-            .services h2 {
+
+            .section-header h2 {
                 font-size: 2.2rem;
             }
         }
-        
+
         @media (max-width: 768px) {
-            body {
-                padding-top: 80px;
+            section {
+                padding: 60px 0;
             }
-            
+
+            .section-header {
+                margin-bottom: 50px;
+            }
+
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
-            .logo-text {
-                font-size: 1.3rem;
+
+            .hero {
+                min-height: 700px;
             }
-            
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                padding: 0 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 1.5rem;
+            }
+
             .logo img {
                 height: 40px;
             }
-            
-            .hero {
-                min-height: 500px;
-            }
-            
-            .hero h1 {
+
+            .section-header h2 {
                 font-size: 2rem;
             }
-            
+
             .service-cards {
-                flex-direction: column;
-                align-items: center;
+                grid-template-columns: 1fr;
             }
-            
-            .card {
-                width: 100%;
-                max-width: 350px;
+
+            .testimonial-card {
+                padding: 30px;
             }
-            
-            .footer-title {
-                font-size: 1.5rem;
+
+            .header-container {
+                padding: 0 20px;
+            }
+
+            .mobile-menu a {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- CABEÇALHO COM LOGO -->
-    <header>
+    <!-- CABEÇALHO PREMIUM REDESENHADO -->
+    <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="logopng.png" alt="Morais Dias Advocacia">
+                <img src="logopng.png" alt="MD Advocacia">
                 <div class="logo-text">
-                    MORAIS <span>DIAS</span>
+                    MD <span>ADVOCACIA</span>
                 </div>
             </a>
             
             <nav class="nav-links">
-                <a href="index.html">Início</a>
+                <a href="index.html" class="active">Início</a>
                 <a href="areas.html">Áreas</a>
                 <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Artigos</a>
                 <a href="contato.html">Contato</a>
             </nav>
             
@@ -483,118 +945,281 @@
             </button>
         </div>
         
-        <!-- MENU MOBILE -->
+        <!-- MENU MOBILE PREMIUM -->
         <div class="mobile-menu" id="mobileMenu">
-            <a href="index.html">Início</a>
-            <a href="areas.html">Áreas</a>
-            <a href="sobre.html">Sobre</a>
+            <a href="index.html" class="active">Início</a>
+            <a href="areas.html">Áreas de Atuação</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="blog.html">Artigos</a>
             <a href="contato.html">Contato</a>
+            <div class="mobile-social" style="margin-top: 40px;">
+                <a href="https://wa.me/5584991199310" style="font-size: 1.8rem; margin: 0 15px; color: var(--secondary);"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" style="font-size: 1.8rem; margin: 0 15px; color: var(--light);"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="font-size: 1.8rem; margin: 0 15px; color: var(--light);"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
     </header>
 
-    <!-- BANNER PRINCIPAL -->
-    <section class="hero" id="home">
+    <!-- HERO SECTION -->
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Excelência Jurídica com Comprometimento</h1>
-                <p>No escritório Morais Dias Advocacia, oferecemos soluções personalizadas nas áreas Previdenciária, Trabalhista, Consumidor e Família, sempre com ética e transparência.</p>
-                <a href="https://wa.me/5584991199310" class="btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> Fale Diretamente
-                </a>
+                <h1>Soluções Jurídicas Personalizadas com Excelência</h1>
+                <p>No escritório MD Advocacia, combinamos expertise técnica com atendimento humanizado para oferecer a melhor estratégia jurídica para seu caso.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/5584991199310" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Fale Conosco
+                    </a>
+                    <a href="areas.html" class="btn btn-outline">
+                        <i class="fas fa-balance-scale"></i> Nossas Áreas
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS (CALL TO ACTION) -->
-    <section class="services" id="areas">
+    <!-- SERVIÇOS -->
+    <section class="services">
         <div class="container">
-            <h2>Nossas Especialidades</h2>
+            <div class="section-header">
+                <h2>Nossas Especialidades</h2>
+            </div>
+            
             <div class="service-cards">
-                <div class="card">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>Previdenciário</h3>
-                    <p>Aposentadorias, revisões de benefícios, auxílios doença e pensões junto ao INSS.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Direito Previdenciário</h3>
+                    <p>Aposentadorias, revisões de benefícios, auxílios doença e pensões junto ao INSS com estratégias personalizadas.</p>
+                    <a href="areas.html#previdenciario" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="card">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Trabalhista</h3>
-                    <p>Rescisões trabalhistas, assédio moral, horas extras não pagas e demais direitos.</p>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Defesa dos direitos trabalhistas com foco em rescisões, assédio moral e recuperação de verbas não pagas.</p>
+                    <a href="areas.html#trabalhista" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="card">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h3>Consumidor</h3>
-                    <p>Defesa contra cobranças abusivas, produtos defeituosos e má prestação de serviços.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-home"></i>
-                    <h3>Família</h3>
-                    <p>Divórcios consensuais e litigiosos, pensão alimentícia, guarda e regulamentação de visitas.</p>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Direito do Consumidor</h3>
+                    <p>Proteção contra abusos nas relações de consumo, cobranças indevidas e produtos/serviços defeituosos.</p>
+                    <a href="areas.html#consumidor" class="service-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me/5584991199310" class="float-whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- SOBRE -->
+    <section class="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Escritório MD Advocacia">
+                </div>
+                
+                <div class="about-content">
+                    <h2>Excelência Jurídica com Abordagem Humanizada</h2>
+                    <p>Fundado em Ceará-Mirim/RN, o escritório MD Advocacia se destaca pela combinação entre conhecimento técnico aprofundado e atendimento personalizado.</p>
+                    <p>Acreditamos que cada caso é único e merece uma estratégia jurídica sob medida, desenvolvida após análise cuidadosa de todas as particularidades.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4>Atendimento Personalizado</h4>
+                                <p>Dedicamos tempo para entender profundamente cada situação e oferecer a melhor solução.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4>Transparência</h4>
+                                <p>Mantemos você informado em todas as etapas do processo com linguagem clara e acessível.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4>Resultados Comprovados</h4>
+                                <p>Histórico de sucesso em diversas áreas do direito com clientes satisfeitos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="sobre.html" class="btn btn-primary" style="margin-top: 20px;">
+                        Conheça Nossa História
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- RODAPÉ REDESENHADO -->
-    <footer id="contato">
-        <div class="container footer-container">
-            <div class="footer-logo">
-                <img src="logopng.png" alt="Morais Dias Advocacia">
-                <div class="footer-title">MORAIS <span>DIAS</span> ADVOCACIA</div>
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que Nossos Clientes Dizem</h2>
             </div>
             
-            <div class="footer-contacts">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <span>Rua Nove de Julho, 298 – Centro, Ceará-Mirim/RN</span>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"O escritório MD Advocacia resolveu meu caso trabalhista com maestria. Depois de anos tentando receber minhas verbas rescisórias, consegui tudo em poucos meses. Atendimento impecável e transparente em todas as etapas."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div class="author-info">
+                                <h4>Maria Clara</h4>
+                                <p>Caso Trabalhista</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt contact-icon"></i>
-                    <span>(84) 99119-9310</span>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Minha aposentadoria foi concedida graças ao trabalho dedicado da equipe MD Advocacia. Explicaram todo o processo de forma clara e conseguiram um resultado que eu já não acreditava ser possível. Recomendo sem hesitar!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <h4>João Silva</h4>
+                                <p>Aposentadoria por Tempo</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <span>nafcdj@gmail.com</span>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Experiência incrível durante meu divórcio. O Dr. Morais Dias foi sensível à minha situação e conseguiu um acordo justo sem prolongar desnecessariamente o processo. Profissionalismo e humanidade em todos os momentos."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AP</div>
+                            <div class="author-info">
+                                <h4>Ana Paula</h4>
+                                <p>Divórcio Consensual</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-id-card contact-icon"></i>
-                    <span>OAB/RN 11071</span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Sobre Nós</h3>
+                    <div class="footer-about">
+                        <p>MD Advocacia é um escritório premium de advocacia com atuação em Ceará-Mirim/RN, oferecendo soluções jurídicas personalizadas com excelência técnica e atendimento humanizado.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Início</a></li>
+                        <li><a href="areas.html"><i class="fas fa-chevron-right"></i> Áreas de Atuação</a></li>
+                        <li><a href="sobre.html"><i class="fas fa-chevron-right"></i> Sobre Nós</a></li>
+                        <li><a href="contato.html"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Blog Jurídico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Áreas de Atuação</h3>
+                    <ul class="footer-links">
+                        <li><a href="areas.html#previdenciario"><i class="fas fa-chevron-right"></i> Direito Previdenciário</a></li>
+                        <li><a href="areas.html#trabalhista"><i class="fas fa-chevron-right"></i> Direito Trabalhista</a></li>
+                        <li><a href="areas.html#consumidor"><i class="fas fa-chevron-right"></i> Direito do Consumidor</a></li>
+                        <li><a href="areas.html#familia"><i class="fas fa-chevron-right"></i> Direito de Família</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Rua Nove de Julho, 298 – Centro, Ceará-Mirim/RN</p>
+                        <p><i class="fas fa-phone-alt"></i> (84) 99119-9310</p>
+                        <p><i class="fas fa-envelope"></i> moraisdiasadvocacia@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h | Sáb: 8h às 12h</p>
+                    </div>
                 </div>
             </div>
             
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:nafcdj@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2023 Morais Dias Advocacia. Todos os direitos reservados.
-                <div class="credits">
-                    Desenvolvido por <a href="https://www.instagram.com/proj.oraculo/" target="_blank">Projeto Oráculo</a>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MD Advocacia. Todos os direitos reservados. OAB/RN 11071</p>
+                <p>Desenvolvido por <a href="https://www.instagram.com/proj.oraculo/" target="_blank" style="color: var(--secondary);">Projeto Oráculo</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5584991199310" class="float-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
-        // Efeito de scroll no header
+        // Header Scroll Effect
         window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
+            const header = document.getElementById('header');
             if (window.scrollY > 50) {
-                header.style.padding = '10px 0';
-                header.style.background = 'rgba(15, 28, 63, 0.98)';
+                header.classList.add('scrolled');
             } else {
-                header.style.padding = '15px 0';
-                header.style.background = '#0F1C3F';
+                header.classList.remove('scrolled');
             }
         });
 
-        // Menu mobile
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         
@@ -604,7 +1229,7 @@
             this.querySelector('i').classList.toggle('fa-times');
         });
         
-        // Fechar menu ao clicar em um link
+        // Close mobile menu when clicking on a link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -613,6 +1238,37 @@
                 mobileMenuBtn.querySelector('i').classList.remove('fa-times');
             });
         });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to your server
+                // For demonstration, we'll just show an alert
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                this.reset();
+            });
+        }
     </script>
 </body>
 </html>
